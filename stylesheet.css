@@ -1,0 +1,148 @@
+body {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "comic sans ms";
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+div.info {
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-flex-wrap: nowrap;
+    /* Safari 6.1+ */
+    -webkit-justify-content: flex-start;
+    /* Safari 6.1+ */
+}
+
+div.info div {
+    color: white;
+    align-self: center;
+    padding: 5px;
+}
+
+div.info div.text {
+    align-self: flex-start;
+}
+
+iframe {
+    height: 34vh;
+    width: 60vh;
+    border: 5px solid white;
+}
+
+div.nav {
+    margin-top: 200px;
+    display: flex;
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-flex-flow: row wrap;
+    /* Safari 6.1+ */
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 20%;
+    align-items: center;
+}
+
+div.wrapper div {
+    margin: 10px;
+    border: 5px solid white;
+    color: white;
+    font-size: 20px;
+    text-decoration-line: none;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    height: 8em;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div.wrapper div:hover {
+    opacity: 0.7;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.8);
+}
+div.wrapper a:focus {
+    opacity: 0.7;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.8);
+}
+
+div.nav div.wie {
+    background-color: #F25F5C;
+}
+
+div.nav div.projects {
+    background-color: #FFE066;
+}
+
+div.nav div.events {
+    background-color: #247BA0;
+}
+
+div.nav div.steun {
+    background-color: #70C1B3;
+}
+
+@media screen and (max-height: 1000px) {
+    div.info {
+        display: none;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    div.nav {
+        padding: 22.5vh;
+        flex-flow: column nowrap;
+        margin-top: auto;
+    }
+}
+
+@media screen and (orientation: portrait),
+screen and (max-width:600px) {
+    div.info {
+        display: none;
+    }
+    div.nav {
+        margin: 0px;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    div.wrapper div {
+        margin: 0px;
+        width: 100vw;
+        min-height: 25vh;
+        height: 6em;
+        overflow-x: hidden;
+    }
+    .wrapper {
+        display: block;
+    }
+}
